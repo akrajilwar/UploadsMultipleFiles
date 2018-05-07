@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Uploads Files</string>
+
+    <string name="string_internet_connection_not_available">Internet Connection Not Available</string>
+    <string name="string_some_thing_wrong">Something went wrong.</string>
+    <string name="internal_storage">Internal storage</string>
+    <string name="chooser_title">Choose Files</string>
+</resources>
