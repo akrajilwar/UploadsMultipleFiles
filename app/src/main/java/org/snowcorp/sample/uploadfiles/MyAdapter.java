@@ -20,11 +20,10 @@ import java.util.ArrayList;
  */
 
 public class MyAdapter extends BaseAdapter {
-
     private Context context;
     private ArrayList<Uri> arrayList;
 
-    public MyAdapter(Context context, ArrayList<Uri> arrayList) {
+    MyAdapter(Context context, ArrayList<Uri> arrayList) {
         this.context = context;
         this.arrayList = arrayList;
     }
@@ -46,10 +45,9 @@ public class MyAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        LayoutInflater mInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-
+        LayoutInflater mInflater = LayoutInflater.from(context);
         if (mInflater != null) {
-            convertView = mInflater.inflate(R.layout.list_items, null);
+            convertView = mInflater.inflate(R.layout.list_items, parent, false);
         }
 
         ImageView imageView = convertView.findViewById(R.id.imageView);

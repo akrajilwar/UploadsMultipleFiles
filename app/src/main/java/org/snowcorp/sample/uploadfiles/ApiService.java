@@ -17,6 +17,8 @@ import retrofit2.http.Part;
  */
 
 public interface ApiService {
+    String BASE_URL = "http://192.168.43.166/~snow/upload-files/";
+
     @Multipart
     @POST("upload.php")
     Call<ResponseBody> uploadMultiple(

@@ -2,7 +2,7 @@ package org.snowcorp.sample.uploadfiles;
 
 import android.content.Context;
 import android.net.ConnectivityManager;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import java.util.Objects;
 
@@ -12,12 +12,11 @@ import java.util.Objects;
  * www.snowcorp.org
  */
 
-public class InternetConnection {
-
+class InternetConnection {
     /**
      * CHECK WHETHER INTERNET CONNECTION IS AVAILABLE OR NOT
      */
-    public static boolean checkConnection(@NonNull Context context) {
+    static boolean checkConnection(@NonNull Context context) {
         return ((ConnectivityManager) Objects.requireNonNull(context.getSystemService
                 (Context.CONNECTIVITY_SERVICE))).getActiveNetworkInfo() != null;
     }
